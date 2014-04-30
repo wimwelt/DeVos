@@ -127,10 +127,109 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Themes\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Themes\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Themes\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Themes\Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Refresh.html" />
+    <Content Include="Themes\bin\Autofac.Configuration.dll" />
+    <Content Include="Themes\bin\Autofac.Configuration.pdb" />
+    <Content Include="Themes\bin\Autofac.Configuration.xml" />
+    <Content Include="Themes\bin\Autofac.dll" />
+    <Content Include="Themes\bin\Autofac.pdb" />
+    <Content Include="Themes\bin\Autofac.xml" />
+    <Content Include="Themes\bin\Castle.Core.dll" />
+    <Content Include="Themes\bin\Castle.Core.xml" />
+    <Content Include="Themes\bin\FluentNHibernate.dll" />
+    <Content Include="Themes\bin\FluentNHibernate.xml" />
+    <Content Include="Themes\bin\Iesi.Collections.dll" />
+    <Content Include="Themes\bin\Iesi.Collections.pdb" />
+    <Content Include="Themes\bin\Iesi.Collections.xml" />
+    <Content Include="Themes\bin\log4net.dll" />
+    <Content Include="Themes\bin\log4net.xml" />
+    <Content Include="Themes\bin\Newtonsoft.Json.dll" />
+    <Content Include="Themes\bin\Newtonsoft.Json.xml" />
+    <Content Include="Themes\bin\NHibernate.dll" />
+    <Content Include="Themes\bin\NHibernate.Linq.dll" />
+    <Content Include="Themes\bin\NHibernate.pdb" />
+    <Content Include="Themes\bin\NHibernate.SqlAzure.dll" />
+    <Content Include="Themes\bin\NHibernate.SqlAzure.pdb" />
+    <Content Include="Themes\bin\NHibernate.xml" />
+    <Content Include="Themes\bin\Orchard.Framework.dll" />
+    <Content Include="Themes\bin\Orchard.Framework.pdb" />
+    <Content Include="Themes\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="Themes\bin\System.Net.Http.Formatting.xml" />
+    <Content Include="Themes\bin\System.Web.Http.dll" />
+    <Content Include="Themes\bin\System.Web.Http.WebHost.dll" />
+    <Content Include="Themes\bin\System.Web.Http.WebHost.xml" />
+    <Content Include="Themes\bin\System.Web.Http.xml" />
+    <Content Include="Themes\bin\System.Web.Mvc.dll" />
+    <Content Include="Themes\bin\System.Web.Mvc.xml" />
+    <Content Include="Themes\bin\System.Web.Razor.dll" />
+    <Content Include="Themes\bin\System.Web.Razor.xml" />
+    <Content Include="Themes\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Themes\bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Themes\bin\System.Web.WebPages.dll" />
+    <Content Include="Themes\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="Themes\bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="Themes\bin\System.Web.WebPages.xml" />
+    <Content Include="Themes\bin\Themes.dll" />
+    <Content Include="Themes\bin\Themes.pdb" />
+    <Content Include="Themes\DeVosTheme\Content\arrow-down.png" />
+    <Content Include="Themes\DeVosTheme\Content\arrow-up.png" />
+    <Content Include="Themes\DeVosTheme\Styles\img\arrow-down.png" />
+    <Content Include="Themes\DeVosTheme\Styles\img\arrow-up.png" />
+    <Content Include="Themes\DeVosTheme\Styles\img\wijnflesdummy.jpg" />
+    <Content Include="Themes\DeVosTheme\Styles\Site.css" />
+    <Content Include="Themes\DeVosTheme\Theme.png" />
+    <Content Include="Themes\DeVosTheme\Theme.txt" />
+    <Content Include="Themes\obj\Debug\Themes.csproj.FileListAbsolute.txt" />
+    <Content Include="Themes\obj\Debug\Themes.dll" />
+    <Content Include="Themes\obj\Debug\Themes.pdb" />
+    <Content Include="Themes\SafeMode\Content\orchard.ico" />
+    <Content Include="Themes\SafeMode\Styles\ie6.css" />
+    <Content Include="Themes\SafeMode\Styles\images\backgroundHeader.gif" />
+    <Content Include="Themes\SafeMode\Styles\images\backgroundVines.gif" />
+    <Content Include="Themes\SafeMode\Styles\images\orchardLogo.gif" />
+    <Content Include="Themes\SafeMode\Styles\site.css" />
+    <Content Include="Themes\SafeMode\Theme.png" />
+    <Content Include="Themes\SafeMode\Theme.txt" />
+    <Content Include="Themes\TheAdmin\Scripts\admin.js" />
+    <Content Include="Themes\TheAdmin\Styles\ie.css" />
+    <Content Include="Themes\TheAdmin\Styles\ie7.css" />
+    <Content Include="Themes\TheAdmin\Styles\ie8.css" />
+    <Content Include="Themes\TheAdmin\Styles\images\adminNavBackground.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\backgroundGradient.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\backgroundHeader.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\error.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-advisory.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-contribute.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-docs.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-friends.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-gallery.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icon-settings.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\icons.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\info.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\menu-default.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\menu-glyph.png" />
+    <Content Include="Themes\TheAdmin\Styles\images\menuClosed.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\menuClosedHover.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\menuOpen.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\menuOpenHover.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\orchardLogo.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\tableHeaderBackgroundRed.gif" />
+    <Content Include="Themes\TheAdmin\Styles\images\vinesBackgroundBottom.gif" />
+    <Content Include="Themes\TheAdmin\Styles\site.css" />
+    <Content Include="Themes\TheAdmin\Theme.png" />
+    <Content Include="Themes\TheAdmin\Theme.txt" />
+    <Content Include="Themes\Themes.csproj" />
+    <Content Include="Themes\TheThemeMachine\Styles\Site.css" />
+    <Content Include="Themes\TheThemeMachine\Theme.png" />
+    <Content Include="Themes\TheThemeMachine\Theme.txt" />
+    <Content Include="Themes\TheThemeMachine\ThemeZonePreview.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -158,6 +257,45 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\Sites.config" />
+    <Content Include="Themes\bin\Themes.dll.config" />
+    <Content Include="Themes\DeVosTheme\Content\Web.config" />
+    <Content Include="Themes\DeVosTheme\Placement.info" />
+    <Content Include="Themes\DeVosTheme\Scripts\Web.config" />
+    <Content Include="Themes\DeVosTheme\Styles\Web.config" />
+    <Content Include="Themes\DeVosTheme\Views\BadgeOfHonor.cshtml" />
+    <Content Include="Themes\DeVosTheme\Views\Branding.cshtml" />
+    <Content Include="Themes\DeVosTheme\Views\Content-Wijn-url-assortiment.cshtml" />
+    <Content Include="Themes\DeVosTheme\Views\Content-Wijn-url-assortiment.Detail.cshtml" />
+    <Content Include="Themes\DeVosTheme\Views\Content-Wijn-url-promoties.cshtml" />
+    <Content Include="Themes\DeVosTheme\Views\Layout.cshtml" />
+    <Content Include="Themes\DeVosTheme\Web.config" />
+    <Content Include="Themes\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Themes\obj\Debug\Themes.csprojResolveAssemblyReference.cache" />
+    <Content Include="Themes\SafeMode\Content\Web.config" />
+    <Content Include="Themes\SafeMode\Styles\Web.config" />
+    <Content Include="Themes\SafeMode\Views\Document.cshtml" />
+    <Content Include="Themes\SafeMode\Views\Layout.cshtml" />
+    <Content Include="Themes\TheAdmin\Scripts\Web.config" />
+    <Content Include="Themes\TheAdmin\Styles\images\icons.psd" />
+    <Content Include="Themes\TheAdmin\Styles\Web.config" />
+    <Content Include="Themes\TheAdmin\Views\ErrorPage.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\Header.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\Layout.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\LocalMenu.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\Menu.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\OrchardVersion.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\Pager.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\Title.cshtml" />
+    <Content Include="Themes\TheAdmin\Views\User.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Placement.info" />
+    <Content Include="Themes\TheThemeMachine\Styles\Web.config" />
+    <Content Include="Themes\TheThemeMachine\Views\BadgeOfHonor.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Views\Branding.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Views\Layout.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Views\Pager.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Views\Pager.First.cshtml" />
+    <Content Include="Themes\TheThemeMachine\Views\Pager.Last.cshtml" />
+    <Content Include="Themes\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -212,6 +350,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Themes\obj\Debug\TempPE\" />
   </ItemGroup>
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
