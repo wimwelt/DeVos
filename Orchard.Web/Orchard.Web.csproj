@@ -295,6 +295,7 @@
     <Content Include="Themes\TheThemeMachine\Views\Pager.First.cshtml" />
     <Content Include="Themes\TheThemeMachine\Views\Pager.Last.cshtml" />
     <Content Include="Themes\Web.config" />
+    <None Include="Properties\PublishProfiles\DeVosToFile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -349,7 +350,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\" />
     <Folder Include="Themes\obj\Debug\TempPE\" />
   </ItemGroup>
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
@@ -363,7 +363,7 @@
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>30321</DevelopmentServerPort>
           <DevelopmentServerVPath>/OrchardLocal</DevelopmentServerVPath>
-          <IISUrl>http://localhost:30321/OrchardLocal</IISUrl>
+          <IISUrl>http://localhost:30321/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
