@@ -1,0 +1,69 @@
+﻿@using Orchard.Utility.Extensions;
+@using Orchard.ContentManagement;
+@using Orchard.MediaLibrary.Models;
+
+@{
+    var drankenterms = (IEnumerable<Orchard.Taxonomies.Models.TermPart>)Model.ContentItem.Wijn.Dranken.Terms;
+    var landterms = (IEnumerable<Orchard.Taxonomies.Models.TermPart>)Model.ContentItem.Wijn.Land.Terms;
+    var fotokens = (IEnumerable<MediaPart>)Model.ContentItem.Wijn.WijnFoto.MediaParts;
+    Orchard.ContentManagement.ContentItem contentItem = Model.ContentItem;
+    string title = Model.Title.ToString();
+    if (Model.Title != null)
+    {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item");
+
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+
+    var tag = Tag(Model, "article");
+
+    string fotourl = @Url.Content(Html.ThemePath(WorkContext.CurrentTheme, "/Styles/img/wijnflesdummy.jpg"));
+    
+        foreach (var foto in fotokens) fotourl = @Href(foto.MediaUrl);
+    
+}
+
+
+<div class="wijninassortiment">
+
+    <h1>@Html.ItemDisplayLink(title, contentItem)</h1>
+    <div class="landendrankwijnassortiment">
+        @foreach (var land in landterms)
+        {
+            <span class="value">@land.Name</span>
+        }
+
+        @foreach (var drank in drankenterms)
+        {
+            <span class="value">@drank.Name</span>
+        }
+
+    </div>
+
+    @if (Model.ContentItem.Wijn.Promotie.Value == true)
+    {
+        <div class="promotiewijninassortiment">@Model.ContentItem.Wijn.PromotieTekst.Value</div>
+    }
+
+    <img class="wijninasortimentfoto" src="@fotourl" />
+    <div>
+        @Model.ContentItem.Wijn.Prijs.Value
+        @Model.ContentItem.Wijn.Jaar.Value
+    </div>
+
+</div>
+
+@*@using (Script.Foot())
+{
+    <script>
+        $(function () {
+            if ($(".promotiewijninassortiment").length){
+                $(".wijninassortiment").css('border', 'solid 1px red');
+            }
+
+        })
+    </script>
+}*@

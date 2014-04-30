@@ -1,0 +1,94 @@
+﻿@using Assortiment.ViewModels
+@using Assortiment.Helpers
+
+    @model List<taxTermViewModel>
+    @{
+
+        Script.Require("jQuery").AtHead();
+        Script.Require("ShapesBase");
+
+    }
+
+    <article class="content-item">
+        <div id="CheckboxLijst">
+
+
+            @using (Html.BeginFormAntiForgeryPost(Url.Action("Index", "Assortiment"), FormMethod.Get))
+            {
+                @Html.ValidationSummary(true)
+
+
+            
+                for (var i = 0; i < Model.Count; i++)
+                {
+                   
+                    <div class="Textboxtcheckbox">@Html.TextBoxFor(x => x[i].TaxonomyName, new { @readonly = true, Style = "border:0; width:100%" })</div>
+
+                    <div class="checkboxList">
+                       
+                       @Html.CheckBoxListFor(
+                                                              x => x[i].PostedTerms.TermIds,
+                                                              x => x[i].AvailableTerms,
+                                                  term => term.Id,
+                                                  term => term.Name,
+                                                  x => x[i].SelectedTerms
+
+                                        )
+                    </div>
+            }
+             
+
+                <input class="green" type="submit"
+                       value="POST" />
+            }
+        </div>
+
+        <table class="Sortering">
+
+            <tr>
+                <th>@sortLink("Prijs", 1)</th>
+                <th>@sortLink("Jaar", 2)</th>
+            </tr>
+        </table>
+
+        <div id="WijnenLijst">
+           
+
+                <fieldset>
+
+                    @helper sortLink(string name, int id)
+{
+
+
+                   @Html.SortLink(name, id, (id == ViewBag.sortBy && ViewBag.isAsc != null ? !((bool)ViewBag.isAsc) : true))
+
+
+    if (id == ViewBag.sortBy)
+    {
+                <span class="arrow @(ViewBag.isAsc ? "up" : "down" )"></span>
+    }
+}
+
+                    @foreach (var wijn in ViewBag.AlleWijnen)
+                    {
+                       
+                        @Display(wijn)
+                    }
+                    <div id="WijnPager">@Display(ViewBag.Pager)</div>
+                </fieldset>
+</div>
+
+    </article>
+    @using (Script.Foot())
+    {
+        <script>
+            $(function () {
+                $('.wijninassortiment').has('.promotiewijninassortiment').css('border', 'red 1px solid');
+                $(".checkboxList").find("input:checkbox").change(function () {
+
+                    $("form").submit();
+                });
+
+            })
+        </script>
+    }

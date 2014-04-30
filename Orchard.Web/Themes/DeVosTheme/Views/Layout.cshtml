@@ -1,0 +1,90 @@
+﻿@functions {
+    // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
+    string CalcuClassify(string[] zoneNames, string classNamePrefix)
+    {
+        var zoneCounter = 0;
+        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : ""; }).ToArray());
+        return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
+    }
+}
+@{
+    /* Global includes for the theme
+    ***************************************************************/
+
+    SetMeta(httpEquiv: "X-UA-Compatible", content: "IE=edge,chrome=1");
+    Style.Include("//fonts.googleapis.com/css?family=Lobster&subset=latin");
+    Style.Include("site.css");
+
+    /* Some useful shortcuts or settings
+    ***************************************************************/
+
+    Func<dynamic, dynamic> Zone = x => Display(x); // Zone as an alias for Display to help make it obvious when we're displaying zones
+
+    WorkContext.Layout.Header.Add(New.Branding(), "5"); // Site name and link to the home page
+    WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
+    WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
+
+    /* Last bit of code to prep the layout wrapper
+    ***************************************************************/
+
+    Model.Id = "layout-wrapper";
+    var tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
+}
+@tag.StartElement
+@if (Model.Header != null)
+{
+    <header id="layout-header" class="group">
+        <div id="header">
+            @Zone(Model.Header)
+        </div>
+    </header>
+}
+@if (Model.Navigation != null)
+{
+    <div id="layout-navigation" class="group">
+        @Zone(Model.Navigation)
+    </div>
+}
+
+
+<div id="layout-main-container">
+    <div id="layout-main" class="group">
+
+        <div id="layout-content" class="group">
+            @if (Model.Messages != null)
+            {
+                <div id="messages">
+                    @Zone(Model.Messages)
+                </div>
+            }
+            @if (Model.BeforeContent != null)
+            {
+                <div id="before-content">
+                    @Zone(Model.BeforeContent)
+                </div>
+            }
+            @* the model content for the page is in the Content zone @ the default position (nothing, zero, zilch) *@
+            @if (Model.Content != null)
+            {
+                <div id="content" class="group">
+                    @Zone(Model.Content)
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layout-footer" class="group">
+    <footer id="footer">
+
+        @if (Model.Footer != null)
+        {
+            <div id="footer-sig" class="group">
+                @Zone(Model.Footer)
+            </div>
+        }
+    </footer>
+</div>
+@tag.EndElement
